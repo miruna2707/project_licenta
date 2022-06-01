@@ -32,3 +32,33 @@
   transform:scale(1.4);
 }
 
+.example-card {
+  border-radius: 5px;
+  max-width: 330px;
+  height: 200px;
+  width: 300px;
+  margin: 20px;
+  box-shadow: 0 3px 5px #000;
+  padding-bottom: 200px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.text2{
+  text-align: center;
+
+
+}
+.text-back{
+  background: #f0efe9;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 1px;
+}
+
+.img-slide{
+  align-items: center;
+  padding: 10px 400px;
+}

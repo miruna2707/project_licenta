@@ -11,7 +11,7 @@
         <div class="field col-12 md:col-6">
           <label for="class">Room Type</label>
           <div class="a">
-          <p-dropdown id="class" [(ngModel)]="class" [options]="classes" (onChange)="setVagons({event : $event})" optionLabel="name" placeholder="Select a Room Type"></p-dropdown>
+          <p-dropdown id="class" [(ngModel)]="seatInformation.class" [options]="classes" (onChange)="setVagons({event : $event})" optionLabel="name" placeholder="Select a Room Type"></p-dropdown>
              </div>
         </div>
 
@@ -21,18 +21,18 @@
     <div class="col-12 md:col-6 lg:col-4">
       <span>Phone</span>
       <div class="aux">
-        <p-inputMask mask="(999) 999-9999" [(ngModel)]="val4" placeholder="(999) 999-9999"></p-inputMask></div>
+        <p-inputMask mask="(999) 999-9999" [(ngModel)]="seatInformation.val4" optionLabel="tel" placeholder="(999) 999-9999"></p-inputMask></div>
     </div>
 
     <div class="calendr">
       <label for="touchui">Arrival date</label>
       <div class="aux">
-      <p-calendar class="a" [(ngModel)]="date13" [touchUI]="true" [readonlyInput]="true" id="touchui"></p-calendar></div>
+      <p-calendar class="a" [(ngModel)]="seatInformation.date13" [touchUI]="true" [readonlyInput]="true" id="touchui"></p-calendar></div>
     </div>
     <div class="calendr">
       <label for="touchui">Departure date</label>
       <div class="aux">
-      <p-calendar class="a" [(ngModel)]="date14" [touchUI]="true" [readonlyInput]="true" id1="touchui"></p-calendar></div>
+      <p-calendar class="a" [(ngModel)]="seatInformation.date14" [touchUI]="true" [readonlyInput]="true" id1="touchui"></p-calendar></div>
     </div>
 
 

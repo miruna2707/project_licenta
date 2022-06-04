@@ -22,10 +22,6 @@ export class SeatDemo implements OnInit {
 
   seatInformation: any;
 
-  date13: Date | undefined;
-  date14: any;
-  val4: any;
-
   ngOnInit() {
     this.seatInformation = this.ticketService.ticketInformation.seatInformation;
 
@@ -47,20 +43,16 @@ export class SeatDemo implements OnInit {
     }
   }
 
-  setSeats({event}: { event: any }) {
-    if (this.seatInformation.wagon && event.value) {
-      this.seats = [];
-      for (let i = 1; i < 10 * event.value.factor; i++) {
-        this.seats.push({seat: i, type: event.value.type});
-      }
-    }
-  }
+
 
   nextPage() {
     if (this.seatInformation.class && this.seatInformation.seat && this.seatInformation.wagon) {
       this.ticketService.ticketInformation.seatInformation = this.seatInformation;
-      this.router.navigate(['steps/payment']);
+      this.router.navigate(['contact/payment']);
     }
+    console.log(this.seatInformation)
+    this.ticketService.ticketInformation.seatInformation = this.seatInformation;
+    this.router.navigate(['contact/payment']);
   }
 
   prevPage() {

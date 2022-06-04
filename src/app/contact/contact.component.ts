@@ -36,7 +36,7 @@ export class ContactComponent implements OnInit {
     ];
 
     this.subscription = this.ticketService.paymentComplete$.subscribe((personalInformation) =>{
-      this.messageService.add({severity:'success', summary:'Order submitted', detail: 'Dear, ' + personalInformation.firstname + ' ' + personalInformation.lastname + ' your order completed.'});
+      this.messageService.add({severity:'success', summary:'Order submitted', detail: 'Dear, ' + personalInformation.firstname + ' ' + personalInformation.lastname + ' your reservation was processed.'});
     });
   }
 

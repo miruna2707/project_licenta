@@ -46,9 +46,11 @@ import { AvailComponent } from './avail/avail.component';
 import {TicketService} from "./contact/TicketService";
 import {ToastModule} from "primeng/toast";
 import {PersonalDemo} from "./contact/Personal/personal.component";
+import {PaymentDemo} from "./contact/payment/payment.component";
 import {InputTextModule} from "primeng/inputtext";
 import {FormsModule} from "@angular/forms";
 import {SeatDemo} from "./contact/seat/seat.component";
+import {ConfirmationDemo} from "./contact/confirmation/confirmation.component";
 import {DropdownModule} from "primeng/dropdown";
 import {InputMaskModule} from "primeng/inputmask";  //required when using MegaMenu
 
@@ -72,7 +74,9 @@ import {InputMaskModule} from "primeng/inputmask";  //required when using MegaMe
     HighlightDirective,
     AvailComponent,
     PersonalDemo,
+    ConfirmationDemo,
     SeatDemo,
+    PaymentDemo
   ],
   imports: [
     BrowserModule,

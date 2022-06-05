@@ -46,7 +46,7 @@ export class SeatDemo implements OnInit {
 
 
   nextPage() {
-    if (this.seatInformation.class && this.seatInformation.seat && this.seatInformation.wagon) {
+    if (this.seatInformation.class && this.seatInformation.seat && this.seatInformation.wagon  ) {
       this.ticketService.ticketInformation.seatInformation = this.seatInformation;
       this.router.navigate(['contact/payment']);
     }

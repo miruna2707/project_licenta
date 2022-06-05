@@ -56,6 +56,11 @@
       <div class="grid grid-nogutter justify-content-end">
         <p-button label="Back" (onClick)="prevPage()" icon="pi pi-angle-left"></p-button>
         <p-button label="Complete" (onClick)="complete()" icon="pi pi-angle-right" iconPos="right" styleClass="p-button-success"></p-button>
+        <div class="col-md-4">
+          <button type="button" name="" class="btn btn-secondary btn-lg btn-block" (click)="generatePDF('download')">Download Invoice</button>
+          <button type="button" name="" class="btn btn-secondary btn-lg btn-block" (click)="generatePDF('print')">Print Invoice</button>
+          <button type="button" name="" class="btn btn-secondary btn-lg btn-block" (click)="generatePDF( )">Open Invoice</button>
+        </div>
       </div>
     </ng-template>
   </p-card>

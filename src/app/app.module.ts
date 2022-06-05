@@ -7,6 +7,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MdbDropdownModule} from "mdb-angular-ui-kit/dropdown";
 
+
 import {
   CarouselModule,
   IconsModule,
@@ -52,7 +53,10 @@ import {FormsModule} from "@angular/forms";
 import {SeatDemo} from "./contact/seat/seat.component";
 import {ConfirmationDemo} from "./contact/confirmation/confirmation.component";
 import {DropdownModule} from "primeng/dropdown";
-import {InputMaskModule} from "primeng/inputmask";  //required when using MegaMenu
+import {InputMaskModule} from "primeng/inputmask";
+import {environment} from "../environments/environment";
+import {AngularFireModule} from "@angular/fire/compat";
+import {AngularFirestoreModule} from "@angular/fire/compat/firestore";  //required when using MegaMenu
 
 //import { AgmCoreModule } from '@agm/core';
 
@@ -88,6 +92,8 @@ import {InputMaskModule} from "primeng/inputmask";  //required when using MegaMe
     IconsModule,
     WavesModule,
     NavbarModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
     NavbarModule,
     NavbarModule,
     IconsModule,
@@ -119,11 +125,14 @@ import {InputMaskModule} from "primeng/inputmask";  //required when using MegaMe
     FormsModule,
     DropdownModule,
     InputMaskModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
     //AgmCoreModule.forRoot({
     //apiKey:'AIzaSyCxpXL86W6evGUGIVRP0MDRO1JzrIL0f_0'
     //})
     //MDBBootstrapModule.forRoot()
   ],
+
+
   providers: [ChildrenOutletContexts,MessageService,TicketService],
   bootstrap: [AppComponent]
 })
